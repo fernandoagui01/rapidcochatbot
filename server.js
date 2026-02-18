@@ -6,7 +6,9 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
 
 // Middleware
-app.use(cors()); // Lets your frontend bypass security blocks to talk to this server
+app.use(cors({
+    origin: 'https://fernandoagui01.github.io'
+})); // Lets your frontend bypass security blocks to talk to this server
 app.use(express.json()); // Allows the server to read incoming JSON messages
 
 // Securely initialize the AI client
@@ -38,4 +40,5 @@ app.post('/chat', async (req, res) => {
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Backend server is running on http://localhost:${PORT}`);
+
 });
