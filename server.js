@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ['https://fernandoagui01.github.io', 'http://127.0.0.1:5500', 'http://localhost:5500']
+    origin: ['https://fernandoagui01.github.io', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://127.0.0.1:3000', 'http://localhost:3000']
 })); // Lets your frontend bypass security blocks to talk to this server
 app.use(express.json()); // Allows the server to read incoming JSON messages
 
@@ -41,5 +41,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Backend server is running on port ${PORT}`);
 });
+
 
 
