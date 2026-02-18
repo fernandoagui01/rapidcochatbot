@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ['https://fernandoagui01.github.io', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://127.0.0.1:3000', 'http://localhost:3000']
+    origin: ['https://fernandoagui01.github.io', 'https://rapid-co.com', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://127.0.0.1:3000', 'http://localhost:3000']
 }));
 app.use(express.json());
 
